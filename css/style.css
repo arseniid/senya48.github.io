@@ -18,7 +18,6 @@ body {
 	background: -moz-radial-gradient(center, circle cover, #7e7e7e 0%, #0e0e0e 75%);
 	background: -webkit-radial-gradient(center, circle cover, #7e7e7e 0%,#0e0e0e 75%);
 	background: radial-gradient(circle at center, #7e7e7e 0%,#0e0e0e 75%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7e7e7e', endColorstr='#0e0e0e',GradientType=1);
 }
 
 h1 {
