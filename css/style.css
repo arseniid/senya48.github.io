@@ -59,7 +59,11 @@ h1 {
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
 }
 
-.ui-btn {
+#ok_button {
+	font-size: 1.2em;
+}
+
+#button_0 {
 	font-size: 1.2em;
 }
 
