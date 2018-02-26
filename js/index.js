@@ -1,15 +1,15 @@
 
-$(document).ready(function() {
+document.ready(function() {
 	adaptSize();
 });
 
-$(window).on('orientationchange', function(event) {
+window.on('orientationchange', function(event) {
 	adaptSize();
 });
 
 function adaptSize() {
-	var screenWidth = $(window).width();
-	var screenHeight = $(window).height();
+	var screenWidth = window.width();
+	var screenHeight = window.height();
 	
 	if (screenHeight > screenWidth) {
 		var imgWidth = screenWidth / 2;
@@ -34,12 +34,12 @@ function adaptSize() {
 	}
 	
 	$('#answer').css({
-		top: -($('#img').outerHeight() * 0.77),
-		width: ($('#img').outerHeight() * 0.3)
+		top: -(document.getElementById('img').outerHeight() * 0.77),
+		width: (document.getElementById('img').outerHeight() * 0.3)
 	});
 	
 	$('#one_more').css({
-		top: -($('#img').outerHeight() * 0.25)
+		top: -(document.getElementById('img').outerHeight() * 0.25)
 	});
 }
 
