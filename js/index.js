@@ -76,7 +76,7 @@ var gamma = 7;
 
 function ready() {
 	window.getElementById('ok_button').remove();
-	window.getElementById('answer_container_2').hide(600);
+	window.getElementById('answer_container_2').css({display: 'none'});
 	shaking = true;
 	startListening();
 	setTimeout(start, 1000);
@@ -93,7 +93,7 @@ function start() {
 			shaking = false;
 			var answer = answers[Math.floor(Math.random() * (answers.length))];
 			window.getElementById('answer').html(answer);
-			window.getElementById('answer_container_2').show(600);
+			window.getElementById('answer_container_2').css({display: 'block'});
 			
 			setTimeout(newTry, 2000);
 		}	
@@ -105,11 +105,11 @@ function start() {
 function newTry() {
 	var buttons = '<div class="next" id="button_0"><button class="ui-btn ui-shadow ui-corner-all ui-btn-inline">' + "One more time?" + '</button></div>';
     window.getElementById('one_more').html(buttons);
-	window.getElementById('one_more').show();
+	window.getElementById('one_more').css({display: 'block'});
 	
     window.getElementById('button_0').click(function() {
-        window.getElementById('answer_container_2').hide(600);
-		window.getElementById('one_more').hide();
+        window.getElementById('answer_container_2').css({display: 'none'});
+		window.getElementById('one_more').css({display: 'none'});
 		ready();
     });
 }
