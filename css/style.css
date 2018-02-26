@@ -1,0 +1,74 @@
+
+header {
+	height: 100px;
+	width: 100%;
+	background-color: #0000FF;
+	margin-top: 30px;
+}
+
+.ui-page {
+	font-size: 1.1em;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: #ffffff;
+	
+	background: #7e7e7e;
+	background: -moz-radial-gradient(center, circle cover, #7e7e7e 0%, #0e0e0e 75%);
+	background: -webkit-radial-gradient(center, circle cover, #7e7e7e 0%,#0e0e0e 75%);
+	background: radial-gradient(circle at center, #7e7e7e 0%,#0e0e0e 75%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7e7e7e', endColorstr='#0e0e0e',GradientType=1);
+}
+
+h1 {
+	text-shadow: 0px 0px 3px magenta;
+	font-size: 2.0em;
+	text-align: center;
+}
+
+/* #answer_container_1 { */
+	/* width: 370px; */
+	/* height: 370px; */
+	/* margin: 0 auto; */
+	/* background: url(../img/ball.png) center center no-repeat; */
+	/* /*background-size: contain;*/ */
+/* } */
+
+/* #answer_container_2 { */
+	/* width: 170px; */
+	/* height: 170px; */
+	/* margin: 0 auto; */
+	/* padding-top: 240px; */
+	/* background: url(../img/icosahedron_original.png) center center no-repeat; */
+	/* display: none; */
+/* } */
+
+#answer_container_2 {
+	position: absolute;
+}
+
+#answer {
+	position: relative;
+	top: -230px;
+	font-size: 1.4em;
+	margin: 0 auto;
+	text-align: center;
+	width: 100px;
+	color: white;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+.ui-btn {
+	font-size: 1.2em;
+}
+
+#one_more {
+	position: relative;
+	top: -75px;
+    width: 100%;
+}
+
+#img {
+	
+}
