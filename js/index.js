@@ -1,15 +1,15 @@
 
-document.ready(function() {
+$(document).ready(function() {
 	adaptSize();
 });
 
-window.on('orientationchange', function(event) {
+$(window).on('orientationchange', function(event) {
 	adaptSize();
 });
 
 function adaptSize() {
-	var screenWidth = window.width();
-	var screenHeight = window.height();
+	var screenWidth = $(window).width();
+	var screenHeight = $(window).height();
 	
 	if (screenHeight > screenWidth) {
 		var imgWidth = screenWidth / 2;
@@ -34,12 +34,12 @@ function adaptSize() {
 	}
 	
 	$('#answer').css({
-		top: -(document.getElementById('img').outerHeight() * 0.77),
-		width: (document.getElementById('img').outerHeight() * 0.3)
+		top: -($('#img').outerHeight() * 0.77),
+		width: ($('#img').outerHeight() * 0.3)
 	});
 	
 	$('#one_more').css({
-		top: -(document.getElementById('img').outerHeight() * 0.25)
+		top: -($('#img').outerHeight() * 0.25)
 	});
 }
 
@@ -75,8 +75,8 @@ var beta = 7;
 var gamma = 7;
 
 function ready() {
-	document.getElementById('ok_button').remove();
-	document.getElementById('answer_container_2').hide(600);
+	$('#ok_button').remove();
+	$('#answer_container_2').hide(600);
 	shaking = true;
 	startListening();
 	setTimeout(start, 1000);
@@ -92,8 +92,8 @@ function start() {
 			clearTimeout(timerId);
 			shaking = false;
 			var answer = answers[Math.floor(Math.random() * (answers.length))];
-			document.getElementById('answer').html(answer);
-			document.getElementById('answer_container_2').show(600);
+			$('#answer').html(answer);
+			$('#answer_container_2').show(600);
 			
 			setTimeout(newTry, 2000);
 		}	
@@ -104,12 +104,12 @@ function start() {
 
 function newTry() {
 	var buttons = '<div class="next" id="button_0"><button class="ui-btn ui-shadow ui-corner-all ui-btn-inline">' + "One more time?" + '</button></div>';
-    document.getElementById('one_more').html(buttons);
-	document.getElementById('one_more').show();
+    $('#one_more').html(buttons);
+	$('#one_more').show();
 	
-    document.getElementById('button_0').click(function() {
-        document.getElementById('answer_container_2').hide(600);
-		document.getElementById('one_more').hide();
+    $('#button_0').click(function() {
+        $('#answer_container_2').hide(600);
+		$('#one_more').hide();
 		ready();
     });
 }
