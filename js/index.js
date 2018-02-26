@@ -1,15 +1,15 @@
 
-$(document).ready(function() {
+window.document.ready(function() {
 	adaptSize();
 });
 
-$(window).on('orientationchange', function(event) {
+window.on('orientationchange', function(event) {
 	adaptSize();
 });
 
 function adaptSize() {
-	var screenWidth = $(window).width();
-	var screenHeight = $(window).height();
+	var screenWidth = window.width();
+	var screenHeight = window.height();
 	
 	if (screenHeight > screenWidth) {
 		var imgWidth = screenWidth / 2;
@@ -17,7 +17,7 @@ function adaptSize() {
 			imgWidth = 'auto';
 		}
 		
-		$('#img').css({
+		window.getElementById('img').css({
 			width: imgWidth,
 			height: 'auto'
 		});
@@ -27,19 +27,19 @@ function adaptSize() {
 			imgHeight = 'auto';
 		}
 		
-		$('#img').css({
+		window.getElementById('img').css({
 			height: imgHeight,
 			width: 'auto'
 		});
 	}
 	
-	$('#answer').css({
-		top: -($('#img').outerHeight() * 0.77),
-		width: ($('#img').outerHeight() * 0.3)
+	window.getElementById('answer').css({
+		top: -(window.getElementById('img').outerHeight() * 0.77),
+		width: (window.getElementById('img').outerHeight() * 0.3)
 	});
 	
-	$('#one_more').css({
-		top: -($('#img').outerHeight() * 0.25)
+	window.getElementById('one_more').css({
+		top: -(window.getElementById('img').outerHeight() * 0.25)
 	});
 }
 
@@ -75,8 +75,8 @@ var beta = 7;
 var gamma = 7;
 
 function ready() {
-	$('#ok_button').remove();
-	$('#answer_container_2').hide(600);
+	window.getElementById('ok_button').remove();
+	window.getElementById('answer_container_2').hide(600);
 	shaking = true;
 	startListening();
 	setTimeout(start, 1000);
@@ -92,8 +92,8 @@ function start() {
 			clearTimeout(timerId);
 			shaking = false;
 			var answer = answers[Math.floor(Math.random() * (answers.length))];
-			$('#answer').html(answer);
-			$('#answer_container_2').show(600);
+			window.getElementById('answer').html(answer);
+			window.getElementById('answer_container_2').show(600);
 			
 			setTimeout(newTry, 2000);
 		}	
@@ -104,12 +104,12 @@ function start() {
 
 function newTry() {
 	var buttons = '<div class="next" id="button_0"><button class="ui-btn ui-shadow ui-corner-all ui-btn-inline">' + "One more time?" + '</button></div>';
-    $('#one_more').html(buttons);
-	$('#one_more').show();
+    window.getElementById('one_more').html(buttons);
+	window.getElementById('one_more').show();
 	
-    $('#button_0').click(function() {
-        $('#answer_container_2').hide(600);
-		$('#one_more').hide();
+    window.getElementById('button_0').click(function() {
+        window.getElementById('answer_container_2').hide(600);
+		window.getElementById('one_more').hide();
 		ready();
     });
 }
