@@ -1,5 +1,5 @@
 
-window.document.ready(function() {
+/* window.document.ready(function() {
 	adaptSize();
 });
 
@@ -41,7 +41,7 @@ function adaptSize() {
 	window.getElementById('one_more').css({
 		top: -(window.getElementById('img').outerHeight() * 0.25)
 	});
-}
+} */
 
 var answers = [
 		'It is certain',
